@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Other Function","Call from Other.js File")})();

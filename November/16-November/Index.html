@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            max-width:400px;
+            margin: 20px auto;
+        }
+        label{
+            display: block;
+            margin-bottom: 8px;
+        }
+        input,select{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <legend style="text-align: center;"><h1 style="text-align: center; color: rgb(134, 143, 143);">Registeration form</h1></legend>
+    <form id="registerForm" >
+        <label for="name">Name</label>
+        <input type="text" id="name"  placeholder="username" /><br>
+        <label for="email">email</label>
+        <input type="text" id="email"  placeholder="User Email" /><br>
+        <label for="contact">Conatct</label>
+        <input type="text" id="contact"  placeholder="user contact" /><br>
+        <label for="gender">Gender</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <button type="button" onclick="saveForm()">Save</button>
+        <button type="button" onclick="resetForm()">Cancel</button><br>
+    </form>
+    <div id="root"></div>
+</fieldset>
+<script src="App.js"></script>
+</body>
+</html>

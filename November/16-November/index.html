@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Registeration Page</h1>
+    <form>
+      <label> Name: <input type="text" placeholder="Username" /> </label>
+      <label> Email: <input type="text" placeholder="User Email" /> </label>
+      <label>
+        Phone Number: <input type="text" placeholder="User Contact Number" />
+      </label>
+    </form>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button.cancel {
+      background-color: #ccc;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="number">Number:</label>
+    <input type="text" id="number" name="number" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button type="button" onclick="saveForm()">Save</button>
+    <button type="button" class="cancel" onclick="resetForm()">Cancel</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function saveForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var number = document.getElementById("number").value;
+      var gender = document.getElementById("gender").value;
+
+      var resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "<h2>Entered Values:</h2>" +
+                            "<p>Name: " + name + "</p>" +
+                            "<p>Email: " + email + "</p>" +
+                            "<p>Number: " + number + "</p>" +
+                            "<p>Gender: " + gender + "</p>";
+    }
+
+    function resetForm() {
+      document.getElementById("registrationForm").reset();
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+
+</body>
+</html>

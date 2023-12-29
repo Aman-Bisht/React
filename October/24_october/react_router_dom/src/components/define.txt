@@ -1,0 +1,11 @@
+In this project I have go through the concept of react-router-dom and react-router
+Outlet = Provide Layout
+NavLink = it have a property of active class
+useNavigate = it help to navigate from one component to another
+Relative link = which cannot be access using "/" because it inherit the parent property
+                or call inside the parent route.
+Nested Routed
+Index Route = We have to call first child route as default
+URL Params :-
+useParams = to access the url data like user id;
+
